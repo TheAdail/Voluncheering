@@ -121,7 +121,6 @@ class TnC extends Component {
         <Text style={styles.text}>
           - George Karounis{'\n'}
           - Joseph Beckhore{'\n'}
-          - Sandy Vasserman{'\n'}
           - Mordi Slavin{'\n'}
           - Shannon Cohen{'\n'}
         </Text>

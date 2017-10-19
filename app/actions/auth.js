@@ -1,6 +1,7 @@
 import { AccessToken, LoginManager } from  'react-native-fbsdk'
 import DefaultPreference from 'react-native-default-preference'
 import { NavigationActions } from 'react-navigation'
+import { Alert } from 'react-native'
 
 import {
   db,

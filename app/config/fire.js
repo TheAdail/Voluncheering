@@ -7,12 +7,12 @@ import {
 } from '~/actions/auth'
 
 firebase.initializeApp({
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: ""
+  apiKey: "AIzaSyC97oIiToe-R803x6NtTzTql4fU4t9QNgs",
+  authDomain: "voluncheering-c3ae7.firebaseapp.com",
+  databaseURL: "https://voluncheering-c3ae7.firebaseio.com",
+  projectId: "voluncheering-c3ae7",
+  storageBucket: "voluncheering-c3ae7.appspot.com",
+  messagingSenderId: "150221963070"
 })
 
 export const db = firebase.database().ref()

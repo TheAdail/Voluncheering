@@ -12,7 +12,7 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* VoluncheeringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VoluncheeringTests.m */; };
+		00E356F31AD99517003FC87E /* OBKVolunteerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* OBKVolunteerTests.m */; };
 		0A3C4522737F4865BB85F7EE /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FEC8E83889544739A6D5E7F /* EvilIcons.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -36,7 +36,7 @@
 		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* VoluncheeringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VoluncheeringTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* OBKVolunteerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* OBKVolunteerTests.m */; };
 		3314BF8D74144559AFDC4405 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B01CED1385E24290BB1E2AE3 /* FontAwesome.ttf */; };
 		426B2EA81F0A150E003FDDF6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426B2EA51F0A150E003FDDF6 /* FBSDKCoreKit.framework */; };
 		426B2EA91F0A150E003FDDF6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426B2EA61F0A150E003FDDF6 /* FBSDKLoginKit.framework */; };
@@ -96,7 +96,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Voluncheering;
+			remoteInfo = OBKVolunteer;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -124,7 +124,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "Voluncheering-tvOS";
+			remoteInfo = "OBKVolunteer-tvOS";
 		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -289,24 +289,24 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* VoluncheeringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoluncheeringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* OBKVolunteerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OBKVolunteerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* VoluncheeringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoluncheeringTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* OBKVolunteerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OBKVolunteerTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Voluncheering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluncheering.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Voluncheering/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Voluncheering/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* OBKVolunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBKVolunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = OBKVolunteer/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = OBKVolunteer/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Voluncheering/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Voluncheering/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Voluncheering/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OBKVolunteer/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = OBKVolunteer/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = OBKVolunteer/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		1FEC8E83889544739A6D5E7F /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		24B82B4F4C27429BAA21EA07 /* libRCTFBSDK.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTFBSDK.a; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* Voluncheering-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voluncheering-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* Voluncheering-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Voluncheering-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		421F405B1F0A1C7C00211711 /* Voluncheering.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Voluncheering.entitlements; path = Voluncheering/Voluncheering.entitlements; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* OBKVolunteer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OBKVolunteer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* OBKVolunteer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OBKVolunteer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		421F405B1F0A1C7C00211711 /* OBKVolunteer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = OBKVolunteer.entitlements; path = OBKVolunteer/OBKVolunteer.entitlements; sourceTree = "<group>"; };
 		426B2EA51F0A150E003FDDF6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		426B2EA61F0A150E003FDDF6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		426B2EA71F0A150E003FDDF6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -430,13 +430,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* VoluncheeringTests */ = {
+		00E356EF1AD99517003FC87E /* OBKVolunteerTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* VoluncheeringTests.m */,
+				00E356F21AD99517003FC87E /* OBKVolunteerTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = VoluncheeringTests;
+			path = OBKVolunteerTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -465,10 +465,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Voluncheering */ = {
+		13B07FAE1A68108700A75B9A /* OBKVolunteer */ = {
 			isa = PBXGroup;
 			children = (
-				421F405B1F0A1C7C00211711 /* Voluncheering.entitlements */,
+				421F405B1F0A1C7C00211711 /* OBKVolunteer.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -478,7 +478,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				42D2965D1F175877000D8C72 /* logo.gif */,
 			);
-			name = Voluncheering;
+			name = OBKVolunteer;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -601,9 +601,9 @@
 			isa = PBXGroup;
 			children = (
 				426B2EA41F0A14A8003FDDF6 /* Frameworks */,
-				13B07FAE1A68108700A75B9A /* Voluncheering */,
+				13B07FAE1A68108700A75B9A /* OBKVolunteer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* VoluncheeringTests */,
+				00E356EF1AD99517003FC87E /* OBKVolunteerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				3F520FEEB6F14CA0AAB59740 /* Resources */,
 			);
@@ -614,10 +614,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Voluncheering.app */,
-				00E356EE1AD99517003FC87E /* VoluncheeringTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* Voluncheering-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* Voluncheering-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* OBKVolunteer.app */,
+				00E356EE1AD99517003FC87E /* OBKVolunteerTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* OBKVolunteer-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* OBKVolunteer-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -625,9 +625,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* VoluncheeringTests */ = {
+		00E356ED1AD99517003FC87E /* OBKVolunteerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "VoluncheeringTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "OBKVolunteerTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -638,14 +638,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = VoluncheeringTests;
-			productName = VoluncheeringTests;
-			productReference = 00E356EE1AD99517003FC87E /* VoluncheeringTests.xctest */;
+			name = OBKVolunteerTests;
+			productName = OBKVolunteerTests;
+			productReference = 00E356EE1AD99517003FC87E /* OBKVolunteerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Voluncheering */ = {
+		13B07F861A680F5B00A75B9A /* OBKVolunteer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Voluncheering" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "OBKVolunteer" */;
 			buildPhases = (
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -656,14 +656,14 @@
 			);
 			dependencies = (
 			);
-			name = Voluncheering;
+			name = OBKVolunteer;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* Voluncheering.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* OBKVolunteer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* Voluncheering-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* OBKVolunteer-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Voluncheering-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "OBKVolunteer-tvOS" */;
 			buildPhases = (
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -674,14 +674,14 @@
 			);
 			dependencies = (
 			);
-			name = "Voluncheering-tvOS";
-			productName = "Voluncheering-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* Voluncheering-tvOS.app */;
+			name = "OBKVolunteer-tvOS";
+			productName = "OBKVolunteer-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* OBKVolunteer-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* Voluncheering-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* OBKVolunteer-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Voluncheering-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "OBKVolunteer-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -692,9 +692,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "Voluncheering-tvOSTests";
-			productName = "Voluncheering-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* Voluncheering-tvOSTests.xctest */;
+			name = "OBKVolunteer-tvOSTests";
+			productName = "OBKVolunteer-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* OBKVolunteer-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -729,7 +729,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Voluncheering" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "OBKVolunteer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -800,10 +800,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Voluncheering */,
-				00E356ED1AD99517003FC87E /* VoluncheeringTests */,
-				2D02E47A1E0B4A5D006451C7 /* Voluncheering-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* Voluncheering-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* OBKVolunteer */,
+				00E356ED1AD99517003FC87E /* OBKVolunteerTests */,
+				2D02E47A1E0B4A5D006451C7 /* OBKVolunteer-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* OBKVolunteer-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1102,7 +1102,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* VoluncheeringTests.m in Sources */,
+				00E356F31AD99517003FC87E /* OBKVolunteerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1128,7 +1128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* VoluncheeringTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* OBKVolunteerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1137,12 +1137,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Voluncheering */;
+			target = 13B07F861A680F5B00A75B9A /* OBKVolunteer */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* Voluncheering-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* OBKVolunteer-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1154,7 +1154,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = Voluncheering;
+			path = OBKVolunteer;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1174,7 +1174,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-default-preference/ios",
 				);
-				INFOPLIST_FILE = VoluncheeringTests/Info.plist;
+				INFOPLIST_FILE = OBKVolunteerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1188,7 +1188,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voluncheering.app/Voluncheering";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBKVolunteer.app/OBKVolunteer";
 			};
 			name = Debug;
 		};
@@ -1203,7 +1203,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-default-preference/ios",
 				);
-				INFOPLIST_FILE = VoluncheeringTests/Info.plist;
+				INFOPLIST_FILE = OBKVolunteerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1217,7 +1217,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voluncheering.app/Voluncheering";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBKVolunteer.app/OBKVolunteer";
 			};
 			name = Release;
 		};
@@ -1225,7 +1225,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Voluncheering/Voluncheering.entitlements;
+				CODE_SIGN_ENTITLEMENTS = OBKVolunteer/OBKVolunteer.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = RWJVRQ865N;
@@ -1240,7 +1240,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-default-preference/ios",
 				);
-				INFOPLIST_FILE = Voluncheering/Info.plist;
+				INFOPLIST_FILE = OBKVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1248,7 +1248,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "au.org.obk.obk-ios";
-				PRODUCT_NAME = Voluncheering;
+				PRODUCT_NAME = OBKVolunteer;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1257,7 +1257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Voluncheering/Voluncheering.entitlements;
+				CODE_SIGN_ENTITLEMENTS = OBKVolunteer/OBKVolunteer.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWJVRQ865N;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1271,7 +1271,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-default-preference/ios",
 				);
-				INFOPLIST_FILE = Voluncheering/Info.plist;
+				INFOPLIST_FILE = OBKVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1279,7 +1279,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "au.org.obk.obk-ios";
-				PRODUCT_NAME = Voluncheering;
+				PRODUCT_NAME = OBKVolunteer;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1302,7 +1302,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-default-preference/ios",
 				);
-				INFOPLIST_FILE = "Voluncheering-tvOS/Info.plist";
+				INFOPLIST_FILE = "OBKVolunteer-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1314,7 +1314,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Voluncheering-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.OBKVolunteer-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1340,7 +1340,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-default-preference/ios",
 				);
-				INFOPLIST_FILE = "Voluncheering-tvOS/Info.plist";
+				INFOPLIST_FILE = "OBKVolunteer-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1352,7 +1352,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Voluncheering-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.OBKVolunteer-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1371,7 +1371,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Voluncheering-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "OBKVolunteer-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1379,10 +1379,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Voluncheering-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.OBKVolunteer-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voluncheering-tvOS.app/Voluncheering-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBKVolunteer-tvOS.app/OBKVolunteer-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -1398,7 +1398,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Voluncheering-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "OBKVolunteer-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1406,10 +1406,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Voluncheering-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.OBKVolunteer-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voluncheering-tvOS.app/Voluncheering-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBKVolunteer-tvOS.app/OBKVolunteer-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1493,7 +1493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "VoluncheeringTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "OBKVolunteerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1502,7 +1502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Voluncheering" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "OBKVolunteer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1511,7 +1511,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Voluncheering-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "OBKVolunteer-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1520,7 +1520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Voluncheering-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "OBKVolunteer-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1529,7 +1529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Voluncheering" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "OBKVolunteer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

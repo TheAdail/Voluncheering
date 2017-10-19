@@ -14,13 +14,13 @@
 #import <React/RCTRootView.h>
 
 #define TIMEOUT_SECONDS 600
-#define TEXT_TO_LOOK_FOR @"Welcome to React Native!"
+#define TEXT_TO_LOOK_FOR @"OBK Volunteer"
 
-@interface VoluncheeringTests : XCTestCase
+@interface OBKVolunteerTests : XCTestCase
 
 @end
 
-@implementation VoluncheeringTests
+@implementation OBKVolunteerTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

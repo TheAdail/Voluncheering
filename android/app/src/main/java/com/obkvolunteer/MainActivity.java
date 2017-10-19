@@ -1,4 +1,4 @@
-package com.voluncheering;
+package com.obkvolunteer;
 
 import android.content.Intent;
 import com.facebook.react.ReactActivity;
@@ -11,7 +11,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "Voluncheering";
+        return "OBKVolunteer";
     }
 
     @Override

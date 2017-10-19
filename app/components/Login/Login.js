@@ -88,7 +88,7 @@ class Login extends Component {
 
           <View style={styles.topContainer}>
             <Image style={styles.image} source={require('../../images/logo.gif')} />
-            <Text style={styles.title}>Voluncheering</Text>
+            <Text style={styles.title}>OBK Volunteer</Text>
           </View>
 
           <View style={styles.loginForm}>

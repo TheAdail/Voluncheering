@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native'
-import Voluncheering from './app/index'
+import OBKVolunteer from './app/index'
 
-AppRegistry.registerComponent('Voluncheering', () => Voluncheering)
+AppRegistry.registerComponent('OBKVolunteer', () => OBKVolunteer)
