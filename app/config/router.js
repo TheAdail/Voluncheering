@@ -96,6 +96,7 @@ const Tabs = TabNavigator(
       },
       showIcon: true,
       showLabel: true,
+      upperCaseLabel: false,
     }
   }
 )

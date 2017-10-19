@@ -49,15 +49,13 @@ class Profile extends Component {
             <Text style={styles.label}>e-mail</Text>
             <Text style={styles.field}>{p.email}</Text>
           </View>
-          <View style={styles.column}>
-            <View style={[styles.row, { flex: 1 }]}>
-              <Text style={styles.label}>Date of Birth</Text>
-              <Text style={styles.field}>{p.dob}</Text>
-            </View>
-            <View style={[styles.row, { flex: 2, marginLeft: 8 }]}>
-              <Text style={styles.label}>Mobile</Text>
-              <Text style={styles.field}>{p.mobile}</Text>
-            </View>
+          <View style={styles.row}>
+            <Text style={styles.label}>Date of Birth</Text>
+            <Text style={styles.field}>{p.dob}</Text>
+          </View>
+          <View style={styles.row}>
+            <Text style={styles.label}>Mobile</Text>
+            <Text style={styles.field}>{p.mobile}</Text>
           </View>
           <View style={styles.row}>
             <View style={styles.column}>
