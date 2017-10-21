@@ -54,7 +54,7 @@ export default class OpportunityItem extends Component {
         case (tomorrow):
           formatedDate = "TOMORROW"
         default:
-          formatedDate = moment(startDate).format('dddd (ddd)')
+          formatedDate = moment(startDate).format('D MMM, YYYY (ddd)')
       }
     } else {
       formatedDate = moment(startDate).format('D MMM, YYYY (ddd)')

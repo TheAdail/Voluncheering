@@ -37,8 +37,8 @@ class OpportunityDetails extends Component {
           <Text style={styles.title}>{o.title}</Text>
 
           <View style={styles.dateAndSpotsContainer}>
-            <Text style={styles.date}>{this.state.opportunity.date}</Text>
-            <Text style={styles.date}>{this.state.opportunity.start} - {this.state.opportunity.finish}</Text>
+            <Text style={styles.date}>{o.date}</Text>
+            <Text style={styles.date}>{o.start} - {o.finish}</Text>
           </View>
 
           <View style={styles.eventTypeContainer}>
