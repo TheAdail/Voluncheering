@@ -35,7 +35,7 @@ class OpportunityList extends Component {
   }
 
   onRefresh() {
-    this.refreshData(true);
+    // this.refreshData(true);
   }
 
   isGoing = (opportunity) => {
