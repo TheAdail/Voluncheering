@@ -1,5 +1,5 @@
 checkForXcode() {
-  check=$((xcode-\select --install) 2>&1)
+  check=$(xcode-select --install)
   echo $check
   str="xcode-select: note: install requested for command line developer tools"
   while [[ "$check" == "$str" ]];
@@ -9,3 +9,4 @@ checkForXcode() {
   done
 }
 
+checkForXcode;
