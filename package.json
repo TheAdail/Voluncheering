@@ -17,7 +17,7 @@
     "react-native-datepicker": "^1.6.0",
     "react-native-default-preference": "^1.1.1",
     "react-native-elements": "^0.14.0",
-    "react-native-fbsdk": "^0.6.0",
+    "react-native-fbsdk": "0.6.0",
     "react-native-keyboard-aware-scroll-view": "^0.2.9",
     "react-native-navbar": "^1.7.1",
     "react-native-vector-icons": "^4.2.0",
