@@ -58,3 +58,8 @@ export function validateEmail(email) {
 
   return true
 }
+
+export function validateWWCN(wwcn) {
+  // TODO: check this more thoroughly
+  return wwcn.match(/[0-9]{7}[EV]/);
+}
