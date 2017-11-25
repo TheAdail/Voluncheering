@@ -11,7 +11,7 @@ import moment from 'moment'
 
 import { HeaderButton } from '~/components'
 import { colors, fontSizes } from '~/styles'
-import { validateEmail, removeEmpty } from '~/config/utils'
+import { validateWWCN, validateEmail, removeEmpty } from '~/config/utils'
 import { saveProfile } from '~/actions/user'
 import { updateEmail, updatePassword } from '~/actions/auth'
 
@@ -73,7 +73,7 @@ class ProfileEdit extends Component {
     if(this.state.mobile.trim().length < 10) {
       Alert.alert('Mobile Number Required', 'Please, use at least 10 digits')
     } else
-    if(this.state.wwcn !== '' && !this.state.wwcn.match(/[0-9]{7}[EV]/)) {
+    if(!validateWWCN(this.state.wwcn)) {
       Alert.alert('Invalid WWCN', 'A valid WWCN is like 1234567V')
     } else
     if(this.state.password !== '' && this.state.password.trim().length < 6) {
