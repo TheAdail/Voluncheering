@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Check os https://stackoverflow.com/a/3466183
+unameOut="$(uname -s)";
+
+if [ $unameOut != "Darwin" ]; then
+  echo "Sorry, iOS simulator will not work on linux.";
+  exit 1;
+fi
+
 nodeAvailable() {
   which node >> /dev/null;
   if [ $? = "1" ]; then
