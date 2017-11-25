@@ -18,10 +18,16 @@ We decided to use React Native for the mobile app, React for the back office web
 
 This repo is only for the React Native mobile app.
 
+<<<<<<< HEAD
 ## Get up and going
 
 * ./sh/ios-setup.sh
 * run React-native link
+=======
+Instructions to install for iOS
+* ./sh/ios-setup.sh
+* run react-native link
+>>>>>>> ddef303... ios-setup script working. sort of.
 * May have to run `npm start -- --reset-cache`
 * Check whether react packager has opened a terminal window; you have have to restart this at various stages to ensure it gets cleared.
 * `react-native run-ios`
