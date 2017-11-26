@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { View, Text, Platform, Image } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { TabNavigator, StackNavigator, addNavigationHelpers } from 'react-navigation'
-import { Login, OpportunityList, OpportunityDetails,
+import { Login, WWCNform, OpportunityList, OpportunityDetails,
          Profile, ProfileEdit, MyStuff, SignUp, TnC } from '~/components'
 import { colors } from '~/styles'
 import { images } from '~/images'
@@ -17,6 +17,7 @@ const navHeader = {
 
 const AuthStack = StackNavigator(
   {
+    WWCNform: { screen: WWCNform },
     Login: { screen: Login, navigationOptions: { header: null } },
     TnC: { screen: TnC },
     SignUp: { screen: SignUp },
