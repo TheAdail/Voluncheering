@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -53,6 +52,7 @@
 		DB9945153206419DAAEBEA46 /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B82B4F4C27429BAA21EA07 /* libRCTFBSDK.a */; };
 		E514D415A1D746CA9BE32234 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A10AA05753CB483FAB77C4DB /* MaterialIcons.ttf */; };
 		FDF617F8DA444FAA8E7D0196 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77B1F505CA4945E89F6F8E8C /* SimpleLineIcons.ttf */; };
+		8512F0465097439B97B58ED6 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 870D9CC318BD45C58109FD46 /* Feather.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,6 +328,7 @@
 		C24B0C78FB004C0396B22540 /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTFBSDK.xcodeproj; path = "../node_modules/react-native-fbsdk/ios/RCTFBSDK.xcodeproj"; sourceTree = "<group>"; };
 		F8B4376CBEC847AD966DB2F5 /* libRNDefaultPreference.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDefaultPreference.a; sourceTree = "<group>"; };
 		FE8E54421094456BAAF20C8C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		870D9CC318BD45C58109FD46 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,6 +512,7 @@
 				71DB11A586094F018A8C48F7 /* Octicons.ttf */,
 				77B1F505CA4945E89F6F8E8C /* SimpleLineIcons.ttf */,
 				444097FF94BC40C0B415BC26 /* Zocial.ttf */,
+				870D9CC318BD45C58109FD46 /* Feather.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1057,6 +1059,7 @@
 				2785E2AE6170410F801B9428 /* Octicons.ttf in Resources */,
 				FDF617F8DA444FAA8E7D0196 /* SimpleLineIcons.ttf in Resources */,
 				610B5CD9B2C54A009A934522 /* Zocial.ttf in Resources */,
+				8512F0465097439B97B58ED6 /* Feather.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
