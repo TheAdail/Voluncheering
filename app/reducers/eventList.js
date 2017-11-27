@@ -1,27 +1,27 @@
 import {
-  FETCHING_OPPORTUNITIES,
-  UPDATE_OPPORTUNITIES,
-} from '~/actions/opportunityList'
+  FETCHING_EVENTS,
+  UPDATE_EVENTS,
+} from '~/actions/eventList'
 import { LOGOUT } from '~/actions/auth'
 
 const initialState = {
   isFetching: false,
-  opportunities: [],
+  events: [],
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case FETCHING_OPPORTUNITIES :
+    case FETCHING_EVENTS :
       return {
         ...state,
         isFetching: true,
       }
 
-    case UPDATE_OPPORTUNITIES :
+    case UPDATE_EVENTS :
       return {
         ...state,
         isFetching: false,
-        opportunities: action.value,
+        events: action.events,
       }
 
     case LOGOUT :

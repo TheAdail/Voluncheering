@@ -1,6 +1,6 @@
 import firebase from 'firebase'
-import { updateOpportunities, fetchOpportunities } from '~/actions/opportunityList'
-import { updateUserOpportunities, setupProfile } from '~/actions/user'
+import { updateEvents, fetchEvents } from '~/actions/eventList'
+import { updateUserEvents, setupProfile } from '~/actions/user'
 import {
   logout,
   authDidSucceed,
@@ -29,43 +29,43 @@ export function watchAuthState(store) {
     if (user) {
       store.dispatch(authDidSucceed(user.uid))
       store.dispatch(setupProfile(user))
-      watchOpportunities(store)
-      watchUserOpportunities(store, user.uid)
+      watchEvents(store)
+      watchUserEvents(store, user.uid)
     }
   })
 }
 
 // Watch firebase opportunities, format them, and trigger
 // updateOpportunities(opportunities) to update opportunities substate
-export function watchOpportunities(store) {
+export function watchEvents(store) {
   // TODO: Only start watchin if use is logged in
   // TODO: Start watching when user log in
-  store.dispatch(fetchOpportunities())
+  store.dispatch(fetchEvents())
   db.child('opportunities')
     .orderByChild('start')
 //    .limitToLast(15)
     .on('value', (snapshot) => {
-      const opportunities = snapshot.val() || {}
-      const keys = Object.keys(opportunities)
+      const events = snapshot.val() || {}
+      const keys = Object.keys(events)
 
-      const opps = keys.map(key => {
+      const evts = keys.map(key => {
         return {
-          ...opportunities[key],
+          ...events[key],
           key,
         }
       })
 
-      store.dispatch(updateOpportunities(opps))
+      store.dispatch(updateEvents(evts))
     })
 }
 
 // Watch user opportunities joined and resigned, and trigger
 // updateUserOpportunities(opportunities)
-export function watchUserOpportunities(store, uid) {
+export function watchUserEvents(store, uid) {
   db.child(`users/${uid}/opportunities`)
     // .limitToLast(30)
     .on('value', (snapshot) => {
-      const opps = snapshot.val() || {}
-      store.dispatch(updateUserOpportunities(opps))
+      const events = snapshot.val() || {}
+      store.dispatch(updateUserEvents(events))
     })
 }

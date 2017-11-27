@@ -1,12 +1,12 @@
 import {
-  UPDATE_USER_OPPORTUNITIES,
+  UPDATE_USER_EVENTS,
   UPDATE_USER_PROFILE,
 } from '~/actions/user'
 import { LOGOUT } from '~/actions/auth'
 
 const initialState = {
   profile: {},
-  opportunities: {},
+  events: {},
 }
 
 export default (state = initialState, action) => {
@@ -18,10 +18,10 @@ export default (state = initialState, action) => {
         profile: action.profile,
       }
 
-    case UPDATE_USER_OPPORTUNITIES :
+    case UPDATE_USER_EVENTS :
       return {
         ...state,
-        opportunities: action.opportunities,
+        events: action.events,
       }
 
     case LOGOUT :

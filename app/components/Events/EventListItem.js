@@ -7,16 +7,16 @@ import { formatDateTime, formatDate, formatTime } from '~/config/utils'
 import { colors, fontFamily } from '~/styles'
 import { images } from '~/images'
 
-export default class OpportunityItem extends Component {
+export default class EventListItem extends Component {
   static propTypes = {
-    opportunity: PropTypes.object.isRequired,
+    event: PropTypes.object.isRequired,
     going: PropTypes.bool.isRequired,
     navigation: PropTypes.object.isRequired,
   }
 
   showDetails(o, date, start, finish) {
-    return this.props.navigation.navigate('OpportunityDetails', {
-      opportunity: {
+    return this.props.navigation.navigate('EventDetails', {
+      event: {
         key: o.key,
         event_type: o.event_type,
         title: o.title,
@@ -31,10 +31,10 @@ export default class OpportunityItem extends Component {
   }
 
   render() {
-    let o = this.props.opportunity
+    let event = this.props.event
 
-    let startDate = moment(o.start).local()
-    let finishDate = moment(o.finish).local()
+    let startDate = moment(event.start).local()
+    let finishDate = moment(event.finish).local()
     let diff = moment.duration(finishDate.diff(startDate))
     let duration = diff.asHours()
     let formatedDate
@@ -48,7 +48,7 @@ export default class OpportunityItem extends Component {
 
     let date = formatDate(startDate, true)
     let start = formatTime(startDate, true)
-    let finish = formatTime(moment(o.finish).local(), true)
+    let finish = formatTime(moment(event.finish).local(), true)
 
     if (theDateWeek === thisWeek) {
       switch (startDate) {
@@ -64,14 +64,14 @@ export default class OpportunityItem extends Component {
     }
 
     const el = (
-      <TouchableOpacity style={styles.container} onPress={() => this.showDetails(o, formatedDate, start, finish)}>
+      <TouchableOpacity style={styles.container} onPress={() => this.showDetails(event, formatedDate, start, finish)}>
         <View style={styles.timeSection}>
           <Text style={styles.time}>{ `${start}` }</Text>
           <Text style={styles.duration}>{ `${duration}` } h</Text>
         </View>
         <View style={styles.titleSection}>
-          <Text style={styles.title}>{ o.title }</Text>
-          <Text style={styles.eventType}>{ `${o.event_type}` }</Text>
+          <Text style={styles.title}>{ event.title }</Text>
+          <Text style={styles.eventType}>{ `${event.event_type}` }</Text>
         </View>
         <View style={styles.checkSection}>
           {

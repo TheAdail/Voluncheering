@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, SectionList, TouchableOpacity, Image, Text } from 'react-native'
 import { connect } from 'react-redux'
-import { opportunityList } from '~/reducers/opportunityList'
-import { OpportunityItem } from '~/components'
+import { eventList } from '~/reducers/eventList'
+import { EventListItem } from '~/components'
 import { colors } from '~/styles'
 import deepEqual from 'deep-equal'
 import moment from 'moment'
 import { HeaderButton } from '~/components'
 import CalendarPicker from 'react-native-calendar-picker'
 
-class OpportunityList extends Component {
+class EventList extends Component {
 
   static navigationOptions = ({navigation}) => ({
     headerTitle: 'Events',
@@ -23,7 +23,7 @@ class OpportunityList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      filteredOpportunities: [],
+      filteredEvents: [],
       selectedStartDate: null,
     }
     this.onDateChange = this.onDateChange.bind(this)
@@ -49,12 +49,6 @@ class OpportunityList extends Component {
     })
   }
 
-  refreshData(force=false) {
-    // if (force || this.props.listenerSet === false) {
-      // this.props.dispatch(fetchAndSetOpportunitiesListener())
-    // }
-  }
-
   setEvents(events) {
     let sections = {}
     let selectedStartDate = this.state.selectedStartDate === null ? null : moment(this.state.selectedStartDate)
@@ -68,34 +62,32 @@ class OpportunityList extends Component {
       }
     })
     this.setState({
-      filteredOpportunities: Object.values(sections),
+      filteredEvents: Object.values(sections),
     })
   }
 
   componentWillReceiveProps(nextProps) {
     if(!deepEqual(this.props, nextProps)) {
-      let events = nextProps.opportunities.sort((a, b) => a.start.localeCompare(b.start))
+      let events = nextProps.events.sort((a, b) => a.start.localeCompare(b.start))
       this.setEvents(events)
     }
   }
 
-  onRefresh() {
-    //this.refreshData(true);
-  }
+  onRefresh() { }
 
-  isGoing = (opportunity) => {
-    if (this.props.userOpportunities) {
-      if (this.props.userOpportunities[opportunity.key]) {
-        return !this.props.userOpportunities[opportunity.key].resigned
+  isGoing = (event) => {
+    if (this.props.userEvents) {
+      if (this.props.userEvents[event.key]) {
+        return !this.props.userEvents[event.key].resigned
       }
     }
     return false
   }
 
-  renderItem = (opportunity) => {
-    const going = this.isGoing(opportunity)
-    return <OpportunityItem
-      opportunity={opportunity}
+  renderItem = (event) => {
+    const going = this.isGoing(event)
+    return <EventListItem
+      event={event}
       going={going}
       navigation={this.props.navigation}
     />
@@ -123,7 +115,7 @@ class OpportunityList extends Component {
           />
         }
         <SectionList style={styles.container}
-          sections={this.state.filteredOpportunities}
+          sections={this.state.filteredEvents}
           ItemSeparatorComponent={this.renderSeparator}
           renderItem={({item}) => this.renderItem(item)}
           renderSectionHeader={({section}) => this.renderSectionHeader(section.key)}
@@ -157,11 +149,11 @@ const styles = StyleSheet.create({
 })
 
 
-function mapStateToProps ({ opportunityList, user }) {
+function mapStateToProps ({ eventList, user }) {
   return {
-    ...opportunityList,
-    userOpportunities: user.opportunities
+    ...eventList,
+    userEvents: user.events
   }
 }
 
-export default connect(mapStateToProps)(OpportunityList)
+export default connect(mapStateToProps)(EventList)

@@ -1,12 +1,12 @@
 import { db, fbNow } from '~/config/fire'
 
-export const UPDATE_USER_OPPORTUNITIES = 'UPDATE_USER_OPPORTUNITIES'
+export const UPDATE_USER_EVENTS = 'UPDATE_USER_EVENTS'
 export const UPDATE_USER_PROFILE = 'UPDATE_USER_PROFILE'
 
-export function updateUserOpportunities(opportunities) {
+export function updateUserEvents(events) {
   return {
-    type: UPDATE_USER_OPPORTUNITIES,
-    opportunities: opportunities,
+    type: UPDATE_USER_EVENTS,
+    events: events,
   }
 }
 

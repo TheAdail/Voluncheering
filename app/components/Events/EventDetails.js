@@ -4,48 +4,48 @@ import { NavigationActions } from 'react-navigation'
 import { View, Text, StyleSheet, TouchableOpacity, Alert, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import { colors, fontSizes } from '~/styles'
-import { joinOpportunity, leaveOpportunity } from '~/actions/opportunity'
+import { joinEvent, leaveEvent } from '~/actions/event'
 
-class OpportunityDetails extends Component {
+class EventDetails extends Component {
   static navigationOptions = {
     title: 'Event',
   }
 
   state = {
-    opportunity: this.props.navigation.state.params.opportunity,
+    event: this.props.navigation.state.params.event,
     going: this.props.navigation.state.params.going,
   }
 
   join() {
-    this.props.dispatch(joinOpportunity(this.state.opportunity.key, this.props.authedId))
-    Alert.alert(`Thanks for joining\n${this.state.opportunity.title}`)
+    this.props.dispatch(joinEvent(this.state.event.key, this.props.authedId))
+    Alert.alert(`Thanks for joining\n${this.state.event.title}`)
     this.props.dispatch(NavigationActions.back())
   }
 
   leave() {
-    this.props.dispatch(leaveOpportunity(this.state.opportunity.key, this.props.authedId))
+    this.props.dispatch(leaveEvent(this.state.event.key, this.props.authedId))
     Alert.alert('Thanks for letting us know 👍')
     this.props.dispatch(NavigationActions.back())
   }
 
   render () {
-    const o = this.state.opportunity
+    const event = this.state.event
     const going = this.state.going
     return (
       <View style={styles.container}>
         <ScrollView style={{ flex: 1 }} bounces={false}>
-          <Text style={styles.title}>{o.title}</Text>
+          <Text style={styles.title}>{event.title}</Text>
 
           <View style={styles.dateAndSpotsContainer}>
-            <Text style={styles.date}>{o.date}</Text>
-            <Text style={styles.date}>{o.start} - {o.finish}</Text>
+            <Text style={styles.date}>{event.date}</Text>
+            <Text style={styles.date}>{event.start} - {event.finish}</Text>
           </View>
 
           <View style={styles.eventTypeContainer}>
-            <Text style={styles.eventType}>Event type: {o.event_type}</Text>
+            <Text style={styles.eventType}>Event type: {event.event_type}</Text>
           </View>
 
-           <Text style={styles.description}>{o.description}</Text>
+           <Text style={styles.description}>{event.description}</Text>
         </ScrollView>
         <View style={styles.buttonContainer}>
           {going
@@ -137,4 +137,4 @@ function mapStateToProps ({ auth }) {
   }
 }
 
-export default connect(mapStateToProps)(OpportunityDetails)
+export default connect(mapStateToProps)(EventDetails)

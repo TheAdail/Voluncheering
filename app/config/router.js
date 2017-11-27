@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { View, Text, Platform, Image } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { TabNavigator, StackNavigator, addNavigationHelpers } from 'react-navigation'
-import { Login, WWCNform, OpportunityList, OpportunityDetails,
+import { Login, WWCNform, EventList, EventDetails,
          Profile, ProfileEdit, MyStuff, SignUp, TnC } from '~/components'
 import { colors } from '~/styles'
 import { images } from '~/images'
@@ -27,10 +27,10 @@ const AuthStack = StackNavigator(
   }
 )
 
-const OpportunitiesStack = StackNavigator(
+const EventsStack = StackNavigator(
   {
-    OpportunityList: { screen: OpportunityList },
-    OpportunityDetails: { screen: OpportunityDetails },
+    EventList: { screen: EventList },
+    EventDetails: { screen: EventDetails },
   },
   {
     ...navHeader
@@ -50,7 +50,7 @@ const ProfileStack = StackNavigator(
 const MyStuffStack = StackNavigator(
   {
     MyStuff: { screen: MyStuff },
-    OpportunityDetails: { screen: OpportunityDetails },
+    EventDetails: { screen: EventDetails },
   },
   {
     ...navHeader
@@ -59,8 +59,8 @@ const MyStuffStack = StackNavigator(
 
 const Tabs = TabNavigator(
   {
-    Opportunities: {
-      screen: OpportunitiesStack,
+    Events: {
+      screen: EventsStack,
       navigationOptions: {
         tabBarLabel: 'Events',
         tabBarIcon: ({tintColor, focused}) => (

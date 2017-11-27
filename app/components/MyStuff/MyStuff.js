@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, SectionList, Text } from 'react-native'
 import { connect } from 'react-redux'
-import { opportunityList } from '~/reducers/opportunityList'
-import { OpportunityItem } from '~/components'
+import { eventList } from '~/reducers/eventList'
+import { EventListItem } from '~/components'
 import { colors } from '~/styles'
 import deepEqual from 'deep-equal'
 import moment from 'moment'
@@ -19,47 +19,39 @@ class MyStuff extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      filteredOpportunities: [],
+      filteredEvents: [],
     }
-  }
-
-  refreshData(force=false) {
-    // if (force || this.props.listenerSet === false) {
-      // this.props.dispatch(fetchAndSetOpportunitiesListener())
-    // }
   }
 
   componentWillReceiveProps(nextProps) {
     if(!deepEqual(this.props, nextProps)) {
-      let opps = nextProps.opportunities.sort((a, b) => a.start.localeCompare(b.start))
-      opps = opps.filter((opportunity) => {
-        if (nextProps.userOpportunities) {
-          if (nextProps.userOpportunities[opportunity.key]) {
-            return !nextProps.userOpportunities[opportunity.key].resigned
+      let events = nextProps.events.sort((a, b) => a.start.localeCompare(b.start))
+      events = events.filter((event) => {
+        if (nextProps.userEvents) {
+          if (nextProps.userEvents[event.key]) {
+            return !nextProps.userEvents[event.key].resigned
           }
         }
         return false
       })
       let sections = {}
-      opps.forEach(opp => {
-        let date = moment(opp.start).format('DD MMM dddd')
+      events.forEach(event => {
+        let date = moment(event.start).format('DD MMM dddd')
         if(sections[date] === undefined)
           sections[date] = {data: [], key: date}
-        sections[date].data.push(opp)
+        sections[date].data.push(event)
       })
       this.setState({
-        filteredOpportunities: Object.values(sections),
+        filteredEvents: Object.values(sections),
       })
     }
   }
 
-  onRefresh() {
-    //this.refreshData(true);
-  }
+  onRefresh() { }
 
-  renderItem = (opportunity) => {
-    return <OpportunityItem
-      opportunity={opportunity}
+  renderItem = (event) => {
+    return <EventListItem
+      event={event}
       going={true}
       navigation={this.props.navigation}
     />
@@ -78,7 +70,7 @@ class MyStuff extends Component {
   render() {
     return (
       <SectionList style={styles.container}
-        sections={this.state.filteredOpportunities}
+        sections={this.state.filteredEvents}
         ItemSeparatorComponent={this.renderSeparator}
         renderItem={({item}) => this.renderItem(item)}
         renderSectionHeader={({section}) => this.renderSectionHeader(section.key)}
@@ -111,10 +103,10 @@ const styles = StyleSheet.create({
 })
 
 
-function mapStateToProps ({ opportunityList, user }) {
+function mapStateToProps ({ eventList, user }) {
   return {
-    ...opportunityList,
-    userOpportunities: user.opportunities
+    ...eventList,
+    userEvents: user.events
   }
 }
 
