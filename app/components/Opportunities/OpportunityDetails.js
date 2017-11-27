@@ -8,7 +8,7 @@ import { joinOpportunity, leaveOpportunity } from '~/actions/opportunity'
 
 class OpportunityDetails extends Component {
   static navigationOptions = {
-    title: 'Opportunity',
+    title: 'Event',
   }
 
   state = {
@@ -42,7 +42,7 @@ class OpportunityDetails extends Component {
           </View>
 
           <View style={styles.eventTypeContainer}>
-            <Text style={styles.eventType}>Event kind: {o.event_type}</Text>
+            <Text style={styles.eventType}>Event type: {o.event_type}</Text>
           </View>
 
            <Text style={styles.description}>{o.description}</Text>

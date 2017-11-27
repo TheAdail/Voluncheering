@@ -6,8 +6,8 @@ export const colors = {
   white: '#FFFFFF',
   // Colors
   blueFacebook: '#3B5998',
-  green: '#7ED321',
-  orange: '#F5A623',
+  green: '#0CB04B',
+  orange: '#E56535',
   // Old
   red: '#ec1c24',
   background: 'white',

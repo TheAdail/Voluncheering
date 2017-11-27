@@ -30,10 +30,13 @@ export default class OpportunityItem extends Component {
     })
   }
 
-    render() {
+  render() {
     let o = this.props.opportunity
 
     let startDate = moment(o.start).local()
+    let finishDate = moment(o.finish).local()
+    let diff = moment.duration(finishDate.diff(startDate))
+    let duration = diff.asHours()
     let formatedDate
 
     let theDate = startDate.format('YYYY-MM-DD')
@@ -54,20 +57,23 @@ export default class OpportunityItem extends Component {
         case (tomorrow):
           formatedDate = "TOMORROW"
         default:
-          formatedDate = moment(startDate).format('D MMM, YYYY (ddd)')
+          formatedDate = moment(startDate).format('D MMM dddd')
       }
     } else {
-      formatedDate = moment(startDate).format('D MMM, YYYY (ddd)')
+      formatedDate = moment(startDate).format('D MMM dddd')
     }
 
     const el = (
       <TouchableOpacity style={styles.container} onPress={() => this.showDetails(o, formatedDate, start, finish)}>
-        <Text style={styles.title}>{ o.title }</Text>
-        <View style={styles.bottomSection}>
-          <View style={styles.infoSection}>
-            <Text style={styles.time}>{ `${date}\t${start}-${finish}` }</Text>
-            <Text style={styles.eventType}>{ o.event_type }</Text>
-          </View>
+        <View style={styles.timeSection}>
+          <Text style={styles.time}>{ `${start}` }</Text>
+          <Text style={styles.duration}>{ `${duration}` } h</Text>
+        </View>
+        <View style={styles.titleSection}>
+          <Text style={styles.title}>{ o.title }</Text>
+          <Text style={styles.eventType}>{ `${o.event_type}` }</Text>
+        </View>
+        <View style={styles.checkSection}>
           {
              (this.props.going === true)
              ? <Image source={images.icCheck} style={styles.greenCheck}/>
@@ -84,48 +90,45 @@ export default class OpportunityItem extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  title: {
-    marginLeft: 16,
-    marginTop: 8,
-    marginRight: 16,
-    fontSize: 20,
-    fontWeight: '600',
-    fontFamily: fontFamily.default,
-    color: colors.title
-  },
-  bottomSection: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 16,
-    marginRight: 16,
-    marginBottom: 8
-  },
-  infoSection: {
-    flex: 1,
-    marginTop: 16,
-    marginBottom: 8,
-    marginRight: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'stretch',
   },
+  timeSection: {
+    width: 90,
+    paddingTop: 10,
+    paddingLeft: 16,
+  },
+  titleSection: {
+    flex: 1,
+    padding: 8,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  checkSection: {
+    padding: 8
+  },
   time: {
-    fontSize: 14,
+    marginTop: 4,
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+  duration: {
+    marginTop: 4,
+    fontSize: 12,
     fontWeight: 'normal',
-    fontFamily: fontFamily.default,
-    color: colors.orange
+    color: colors.gray,
   },
   eventType: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: 'normal',
-    fontFamily: fontFamily.default,
-    color: colors.red,
+    color: colors.gray,
   },
   spots: {
     fontSize: 14,
     fontWeight: 'normal',
-    fontFamily: fontFamily.default,
     color: colors.orange,
     marginLeft: 32
   },
