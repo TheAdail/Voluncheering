@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OBKVolunteer.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<true/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>409390F11CD52A5601CFBE0ECA9867138E3EAC09</string>
+				<key>dateExpires</key>
+				<string>24/7/18</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>RWJVRQ865N.au.org.obk.obk-ios</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>RWJVRQ865N</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>RWJVRQ865N.org.obk.volunteer</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>OBKVolunteer.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>c36bd1cc-05d6-4dd0-9281-4def77b9ba50</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: au.org.obk.obk-ios</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>RWJVRQ865N</string>
+				<key>name</key>
+				<string>Aleph Retamal</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
