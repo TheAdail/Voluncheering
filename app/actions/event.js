@@ -5,11 +5,11 @@ export const LEAVE_EVENT = 'LEAVE_EVENT'
 
 export function joinEvent(eventId, userId) {
   var updates = {}
-  updates[`/users/${userId}/opportunities/${eventId}`] = {
+  updates[`/users/${userId}/events/${eventId}`] = {
     joined: fbNow,
     resigned: null
   }
-  updates[`/opportunities/${eventId}/users/${userId}`] = {
+  updates[`/events/${eventId}/users/${userId}`] = {
     joined: fbNow,
     resigned: null
   }
@@ -22,8 +22,8 @@ export function joinEvent(eventId, userId) {
 
 export function leaveEvent(eventId, userId) {
   var updates = {}
-  updates[`/users/${userId}/opportunities/${eventId}/resigned`] = fbNow
-  updates[`/opportunities/${eventId}/users/${userId}/resigned`] = fbNow
+  updates[`/users/${userId}/events/${eventId}/resigned`] = fbNow
+  updates[`/events/${eventId}/users/${userId}/resigned`] = fbNow
   db.update(updates)
 
   return {

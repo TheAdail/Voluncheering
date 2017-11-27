@@ -35,13 +35,13 @@ export function watchAuthState(store) {
   })
 }
 
-// Watch firebase opportunities, format them, and trigger
-// updateOpportunities(opportunities) to update opportunities substate
+// Watch firebase events, format them, and trigger
+// updateEvents(events) to update events substate
 export function watchEvents(store) {
   // TODO: Only start watchin if use is logged in
   // TODO: Start watching when user log in
   store.dispatch(fetchEvents())
-  db.child('opportunities')
+  db.child('events')
     .orderByChild('start')
 //    .limitToLast(15)
     .on('value', (snapshot) => {
@@ -59,10 +59,10 @@ export function watchEvents(store) {
     })
 }
 
-// Watch user opportunities joined and resigned, and trigger
-// updateUserOpportunities(opportunities)
+// Watch user events joined and resigned, and trigger
+// updateUserEvents(events)
 export function watchUserEvents(store, uid) {
-  db.child(`users/${uid}/opportunities`)
+  db.child(`users/${uid}/events`)
     // .limitToLast(30)
     .on('value', (snapshot) => {
       const events = snapshot.val() || {}
