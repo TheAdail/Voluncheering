@@ -1,22 +1,26 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, FlatList } from 'react-native'
+import { View, StyleSheet, SectionList, Text } from 'react-native'
 import { connect } from 'react-redux'
 import { opportunityList } from '~/reducers/opportunityList'
 import { OpportunityItem } from '~/components'
 import { colors } from '~/styles'
 import deepEqual from 'deep-equal'
+import moment from 'moment'
 
 class MyStuff extends Component {
 
   static navigationOptions = ({ navigation }) => {
     const { params = {} } = navigation.state
     return {
-      title: 'My Opportunities'
+      title: 'My Events'
     }
   }
 
-  state = {
-    filteredOpportunities: [],
+  constructor(props) {
+    super(props)
+    this.state = {
+      filteredOpportunities: [],
+    }
   }
 
   refreshData(force=false) {
@@ -36,14 +40,21 @@ class MyStuff extends Component {
         }
         return false
       })
+      let sections = {}
+      opps.forEach(opp => {
+        let date = moment(opp.start).format('DD MMM dddd')
+        if(sections[date] === undefined)
+          sections[date] = {data: [], key: date}
+        sections[date].data.push(opp)
+      })
       this.setState({
-        filteredOpportunities: opps.slice(), // slice forces listview update
+        filteredOpportunities: Object.values(sections),
       })
     }
   }
 
   onRefresh() {
-    this.refreshData(true);
+    //this.refreshData(true);
   }
 
   renderItem = (opportunity) => {
@@ -54,6 +65,10 @@ class MyStuff extends Component {
     />
   }
 
+  renderSectionHeader = (caption) => {
+    return <Text style={styles.sectionHeader}>{caption}</Text>
+  }
+
   renderSeparator() {
     return (
       <View style={styles.separator} />
@@ -62,10 +77,11 @@ class MyStuff extends Component {
 
   render() {
     return (
-      <FlatList style={styles.container}
-        data={this.state.filteredOpportunities}
+      <SectionList style={styles.container}
+        sections={this.state.filteredOpportunities}
         ItemSeparatorComponent={this.renderSeparator}
         renderItem={({item}) => this.renderItem(item)}
+        renderSectionHeader={({section}) => this.renderSectionHeader(section.key)}
         refreshing={this.props.isFetching}
         onRefresh={this.onRefresh}
       />
@@ -77,6 +93,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
+  },
+  sectionHeader: {
+    paddingLeft: 14,
+    paddingTop: 4,
+    height: 32,
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'white',
+    backgroundColor: colors.orange,
   },
   separator: {
     flex: 1,

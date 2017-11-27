@@ -62,7 +62,7 @@ const Tabs = TabNavigator(
     Opportunities: {
       screen: OpportunitiesStack,
       navigationOptions: {
-        tabBarLabel: 'Opportunities',
+        tabBarLabel: 'Events',
         tabBarIcon: ({tintColor, focused}) => (
           <Image style={{width: 24, height: 24, tintColor: tintColor}} source={images.icList} />
         )
@@ -71,7 +71,7 @@ const Tabs = TabNavigator(
     MyStuff: {
       screen: MyStuffStack,
       navigationOptions: {
-        tabBarLabel: 'My Opps',
+        tabBarLabel: 'My Events',
         tabBarIcon: ({tintColor, focused}) => (
           <Image style={{width: 24, height: 24, tintColor: tintColor}} source={images.icDoneAll} />
         )
@@ -90,7 +90,7 @@ const Tabs = TabNavigator(
   {
     tabBarPosition: 'bottom',
     tabBarOptions: {
-      activeTintColor: '#007aff',
+      activeTintColor: colors.orange, //'#007aff',
       inactiveTintColor: '#999999',
       style: {
         backgroundColor: colors.tabsBackground
